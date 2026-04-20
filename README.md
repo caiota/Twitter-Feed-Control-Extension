@@ -7,7 +7,7 @@ Esta extensão tem uma vasta quantidade de recursos pra personalizar visualmente
 # Disponível para todos os navegadores Chromium e Gecko
 ### Downloads:
 
-[Gecko (Firefox, Waterfox, etc](https://addons.mozilla.org/pt-BR/firefox/addon/controle-de-feed-para-twitter/)
+[Gecko: Firefox, Waterfox, etc](https://addons.mozilla.org/pt-BR/firefox/addon/controle-de-feed-para-twitter/)
 
 [Chromium: Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/controle-de-feed-para-twi/bmnopclkhmjkdkncliakmhohafebjjij)
 
