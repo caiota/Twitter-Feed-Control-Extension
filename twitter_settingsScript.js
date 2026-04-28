@@ -1,4 +1,4 @@
-var VERSAO="1.17";
+var VERSAO="Ver. 1.18";
 document.querySelector("#versao").innerText=VERSAO;
 document.querySelector('textarea#CustomWord').addEventListener('change', function (item) {
  
@@ -25,7 +25,6 @@ var FUNCTION_SETTINGS = {
   ANTI_SPOILER: false,
   CENSURA_TUDO: false,
   VIDEO_AUTO_PAUSE: true,
-  KEYBOARD_NAVIGATION: true,
   PREVIEW_IMAGES: true,
   SELF_TWEET: false,
   NO_REMOVE: true,
@@ -184,6 +183,9 @@ document
         case 'reportExtension':
           FUNCTION_SETTINGS.SHORTCUTS.report_tweet = valor;
           break;
+        case 'selfDeleteOption':
+          FUNCTION_SETTINGS.SHORTCUTS.selfDeleteOption = valor;
+          break;
         case 'fastBlock':
           FUNCTION_SETTINGS.SHORTCUTS.fast_block = valor;
           break;
@@ -236,9 +238,6 @@ document
           case 'RemoveComplementary':
             FUNCTION_SETTINGS.REMOVE_RIGHT_CONTENT = valor;
             break;
-            case 'KEYBOARD_NAVI':
-              FUNCTION_SETTINGS.KEYBOARD_NAVIGATION = valor;
-              break;
 
 
       }
@@ -277,10 +276,8 @@ document
       
       
       document.querySelector("#LeaveNotesPls").innerText=messages.nota.message;
-      document.querySelector("#notas").href="wc/"+messages.lang.message+"/start.html"
       document.title = messages.extensionName.message;
       document.getElementById("title").innerText=messages.extensionName.message;
-      document.getElementById("notas").innerText=messages.updates_notes.message;
       document.getElementById("reloadTip").innerText=messages.reload_tip.message;
      //FILTER TITLES
      document.getElementById("filterConfig").innerText=messages.legends_filter_config.message;
@@ -335,10 +332,11 @@ document
      document.querySelector("label[for='box_AutoYoutube']").innerText=messages.enable_autoYoutube.message;
      document.querySelector("label[for='box_Uncensure']").innerText=messages.remove_spoilers.message;
      document.querySelector("label[for='box_CensureAll']").innerText=messages.censuraAll.message;
-     document.querySelector("label[for='box_KeyNavi']").innerText=messages.keyboardNavigation.message;
      document.querySelector("label[for='box_RemoveLink']").innerText=messages.removeLinks.message;
      document.querySelector("label[for='box_RemoveLinkOnly']").innerText=messages.remove_OnlyLinks.message;
      document.querySelector("label[for='box_reportExtension']").innerText=messages.fastReport.message;
+     
+     document.querySelector("label[for='box_selfDeleteOption']").innerText=messages.box_selfDeleteOption.message;
      document.querySelector("label[for='box_fastBlock']").innerText=messages.fastBlock.message;
      document.querySelector("label[for='box_verMenos']").innerText=messages.fastSeeless.message;
      document.querySelector("label[for='box_fastMute']").innerText=messages.fastMute.message;
@@ -376,10 +374,10 @@ document
      document.querySelector("div.box_AutoYoutube").innerText=messages.enable_autoYoutube.description;
      document.querySelector("div.box_Uncensure").innerText=messages.remove_spoilers.description;
      document.querySelector("div.box_CensureAll").innerText=messages.censuraAll.description;
-     document.querySelector("div.box_KeyNavi").innerText=messages.keyboardNavigation.description;
      document.querySelector("div.box_RemoveLink").innerText=messages.removeLinks.description;
      document.querySelector("div.box_RemoveLinkOnly").innerText=messages.remove_OnlyLinks.description;
      document.querySelector("div.box_reportExtension").innerText=messages.fastReport.description;
+     document.querySelector("div.box_selfDeleteOption").innerText=messages.box_selfDeleteOption.description;
      document.querySelector("div.box_fastBlock").innerText=messages.fastBlock.description;
      document.querySelector("div.box_verMenos").innerText=messages.fastSeeless.description;
      document.querySelector("div.box_fastMute").innerText=messages.fastMute.description;
@@ -440,10 +438,10 @@ switch(message.message){
       FUNCTION_SETTINGS.ANTI_SPOILER = itens.ANTI_SPOILER;
       FUNCTION_SETTINGS.CENSURA_TUDO = itens.CENSURA_TUDO;
       FUNCTION_SETTINGS.VIDEO_AUTO_PAUSE = itens.VIDEO_AUTO_PAUSE;
-      FUNCTION_SETTINGS.KEYBOARD_NAVIGATION=itens.KEYBOARD_NAVIGATION;
       FUNCTION_SETTINGS.NO_REMOVE = itens.NO_REMOVE;
       FUNCTION_SETTINGS.SHORTCUTS.fast_block = itens.SHORTCUTS.fast_block;
       FUNCTION_SETTINGS.SHORTCUTS.report_tweet = itens.SHORTCUTS.report_tweet;
+      FUNCTION_SETTINGS.SHORTCUTS.selfDeleteOption = itens.SHORTCUTS.selfDeleteOption;
       FUNCTION_SETTINGS.SHORTCUTS.view_less = itens.SHORTCUTS.view_less;
       FUNCTION_SETTINGS.SHORTCUTS.mute_user = itens.SHORTCUTS.mute_user;
       FUNCTION_SETTINGS.SHORTCUTS.view_quotes = itens.SHORTCUTS.view_quotes;
@@ -524,6 +522,7 @@ switch(message.message){
       document.querySelector('input#box_RemoveBigLetters').checked = FUNCTION_SETTINGS.Tweet_Scan_Palavras.LetrasGrandes;
       document.querySelector('input#box_FadeOutTweet').checked = FUNCTION_SETTINGS.NO_REMOVE;
       document.querySelector('input#box_reportExtension').checked = FUNCTION_SETTINGS.SHORTCUTS.report_tweet;
+      document.querySelector('input#box_selfDeleteOption').checked = FUNCTION_SETTINGS.SHORTCUTS.selfDeleteOption;
       document.querySelector('input#box_fastBlock').checked = FUNCTION_SETTINGS.SHORTCUTS.fast_block;
       document.querySelector('input#box_verMenos').checked = FUNCTION_SETTINGS.SHORTCUTS.view_less;
       document.querySelector('input#box_fastMute').checked = FUNCTION_SETTINGS.SHORTCUTS.mute_user;
@@ -537,7 +536,6 @@ switch(message.message){
       document.querySelector('input#box_RemoveAutomated').checked = FUNCTION_SETTINGS.Tweet_Scan_Palavras.RemoveAutomated;
       document.querySelector('input#box_AutoYoutube').checked = FUNCTION_SETTINGS.AUTOPLAY_YOUTUBE;
       document.querySelector('input#box_RemoveComplementary').checked = FUNCTION_SETTINGS.REMOVE_RIGHT_CONTENT;
-      document.querySelector('input#box_KeyNavi').checked = FUNCTION_SETTINGS.KEYBOARD_NAVIGATION;
       document.querySelector('input#box_SearchFix').checked = FUNCTION_SETTINGS.Tweet_Scan_Palavras.clearSearch;
       document.querySelector('input#box_NotificationSearch').checked = FUNCTION_SETTINGS.NOTIFICATION_SEARCH;
       document.querySelector('input#box_SearchFix').checked = FUNCTION_SETTINGS.Tweet_Scan_Palavras.clearSearch;

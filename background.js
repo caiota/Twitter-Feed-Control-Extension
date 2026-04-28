@@ -16,12 +16,11 @@ const FUNCTION_SETTINGS_PADRAO = {
   ANTI_SPOILER: false,
   CENSURA_TUDO: false,
   VIDEO_AUTO_PAUSE: true,
-  KEYBOARD_NAVIGATION: true,
   PREVIEW_IMAGES: true,
   SELF_TWEET: false,
   NO_REMOVE: true,
   AUTOPLAY_YOUTUBE: false,
-  HORIZONTAL_MENU: true,
+  HORIZONTAL_MENU: false,
   REMOVE_RIGHT_CONTENT: false,
   REMOVE_NOPIC_USER: false,
   REMOVE_SPONSORED: true,
@@ -66,6 +65,7 @@ const FUNCTION_SETTINGS_PADRAO = {
   SHORTCUTS: {
     fast_block: true,
     report_tweet: false,
+    selfDeleteOption: true,
     view_less: false,
     mute_user: true,
     view_quotes: true
@@ -255,9 +255,9 @@ chrome.runtime.onInstalled.addListener(details => {
   if (details.reason === "install") {
     SALVAR_PALAVRAS_PREDEFINIDAS(BANNED_ITEMS_PADRAO);
     SALVAR_FUNCOES(FUNCTION_SETTINGS_PADRAO);
+  chrome.tabs.create({ url: "wc/"+chrome.i18n.getMessage("lang")+"/start.html" });
   }
 
-  chrome.tabs.create({ url: "wc/"+chrome.i18n.getMessage("lang")+"/start.html" });
 });
 
 

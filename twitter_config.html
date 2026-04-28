@@ -171,7 +171,9 @@ body {
              -ms-flex-align: center;
                  align-items: center;
          }
-         #disc{
+         #github{
+            
+    filter: invert(1);
          border-bottom-left-radius: 50px;
          }
          #pix{
@@ -214,14 +216,17 @@ body {
             width:34px;
             height:34px;
          }
+         #versao{
+            font-size: 20px;
+         }
       </style>
    </head>
    <body>
       <div id="icont"><img id="ic" src="icon.png"></div>
       <br>
-      <center><div style="font-size: xx-large;" id="title">Controle de Feed para Twitter</div>
+      <center><div style="font-size: xx-large;" id="title">Controle de Feed - Twitter/X</div>
       <br>
-      Ver.<span id="versao">0.1.2 beta</span> - <a id="notas" href="start.html" target="_blank">Notas desta Versão</a><br><br>
+      <span id="versao">>Ver. 0.1.2 beta</span><br><br>
       <a href="#" id="notesUrl" target="_blank"><span id="LeaveNotesPls">o.O its not loading?</span>
          <br><br><img src="img/star.webp"><img src="img/star.webp"><img src="img/star.webp"><img src="img/star.webp"><img src="img/star.webp"></a>
       <hr>
@@ -298,6 +303,15 @@ body {
       <br><br>
       <fieldset>
          <legend id="banned_words">Filtros por Palavras Banidas</legend>
+          <br>
+         <div class="popup">
+            <div class="custom-checkbox"><input type="checkbox" id="box_CustomWord" valor="PalavrasCustomizadas">
+               <label for="box_CustomWord" class="subBox">Ativar Filtro de Palavras Customizadas</label>
+            </div>
+            <div class="popuptext box_CustomWord">
+               Remove Tweets que contém Termos Definidos por Você, digite abaixo as palavras que quer Filtrar nos Tweets separando um Elemento por Linha. Você pode escrever oque quiser, caso queira por exemplo banir algum site basta coloca-lo com o prefixo como por exemplo Google.com/ ao invés de só Google
+              </div>
+         </div>
          <div class="popup">
             <div class="custom-checkbox"><input type="checkbox" id="box_ScanFullWord" valor="full_word"><label for="box_ScanFullWord" class="subBox">Aplicar Filtro Apenas em Palavras Completas</label></div>
             <div class="popuptext box_ScanFullWord">Aplica o Filtro apenas se for identificado uma Palavra Completa.</div>
@@ -309,15 +323,7 @@ body {
                Melhora o Filtro deixando-o mais Agressivo aplicando o filtro dentro das palavras, mas pode afetar tweets inocentes como por Exemplo o Filtro "porn" irá ser ativado em palavras não-relacionadas como "pornélio", recomenda-se deixar desativado caso tenha problemas ou considere melhorar os filtros Manuais colocando palavras mais completas.
               </div>
          </div>
-         <br>
-         <div class="popup">
-            <div class="custom-checkbox"><input type="checkbox" id="box_CustomWord" valor="PalavrasCustomizadas">
-               <label for="box_CustomWord" class="subBox">Ativar Filtro de Palavras Customizadas</label>
-            </div>
-            <div class="popuptext box_CustomWord">
-               Remove Tweets que contém Termos Definidos por Você, digite abaixo as palavras que quer Filtrar nos Tweets separando um Elemento por Linha. Você pode escrever oque quiser, caso queira por exemplo banir algum site basta coloca-lo com o prefixo como por exemplo Google.com/ ao invés de só Google
-              </div>
-         </div>
+        
          <br>
          <div class="popup">
             <div class="custom-checkbox"><input type="checkbox" id="box_CensuraPalavra" valor="CensuraPalavra">
@@ -525,13 +531,6 @@ body {
             </div>
             <div class="popuptext box_CensureAll">Censura Todas as Mídias (Imagens e Vídeos) dos Tweets e Remove a Censura ao Passar o mouse.</div>
          </div>
-         <br>
-         <div class="popup">
-            <div class="custom-checkbox"><input type="checkbox" id="box_KeyNavi" valor="KEYBOARD_NAVI">
-               <label for="box_KeyNavi" class="subBox">Ativar Navegação pelo Teclado</label>
-            </div> 
-            <div class="popuptext box_KeyNavi">Navega entre os tweets usando apenas as teclas WASD (e setas) do teclado, use W e S para navegar para cima e baixo, D para entrar no tweet selecionado e A para voltar sem usar o mouse.</div>
-         </div>
       </fieldset>
       <br><br>
       <fieldset>
@@ -554,6 +553,14 @@ body {
       <br><br>
       <fieldset>
          <legend id="fast_actions">Ações Rápidas nos Tweets</legend>
+ <div class="popup">
+            <div class="custom-checkbox"><input type="checkbox" id="box_selfDeleteOption" valor="selfDeleteOption">
+               <label for="box_selfDeleteOption" class="subBox">Apagar proprio tweet rapidamente</label>
+            </div>
+            <div class="popuptext"><div class="box_selfDeleteOption">Apagar proprio tweet rapidamente.</div><br><img src="IMAGE/FastButtons.png"/></div>
+         </div>
+         <br>
+
          <div class="popup">
             <div class="custom-checkbox"><input type="checkbox" id="box_reportExtension" valor="reportExtension">
                <label for="box_reportExtension" class="subBox">Mostrar Botão de Reportar Tweet para a Extensão (ainda não implementado)</label>
@@ -591,8 +598,7 @@ body {
       </fieldset>
       <br><br>
       <div id="centerContent">
-         <a href="https://discord.gg/a8rYfPFT6d" target="blank_"><img src="img/discord.png"></a>
-         <a href="https://twitter.com/CaiotaGames" target="blank_"> <img src="img/Twitter.png"></a>
+         <a href="https://github.com/caiota" target="blank_"> <img id="github" src="IMAGE/github.png"></a>
          <a href="https://livepix.gg/caiota" target="blank_"><img src="img/pix.png"></a>
       </div>
    </body>

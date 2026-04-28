@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "__MSG_extensionName__",
   "description": "__MSG_description__",
-  "version": "1.17",
+  "version": "1.18",
   "default_locale": "pt_BR",
   "permissions": [
     "tabs",
@@ -16,11 +16,34 @@
         "https://*.twitter.com/*",
         "https://*.x.com/*"
       ],
-      "run_at": "document_end",
+      "run_at": "document_start",
       "css": [
         "SCRIPT/TWITTER/TWITTER.css"
       ],
       "js": [
+        "SCRIPT/Functions/utils_videoControls.js",
+        "SCRIPT/Functions/utils_JaccardAlgorithm.js",
+        "SCRIPT/Functions/TweetAction_CheckPictures.js",
+        "SCRIPT/Functions/TweetAction_RemoveTweet.js",
+        "SCRIPT/Functions/TweetAction_RevealSpoilers.js",
+        "SCRIPT/Functions/RemoveTweet_SelfRetweets.js",
+        "SCRIPT/Functions/SiteOptions_HorizontalMenu.js",
+        "SCRIPT/Functions/SiteOptions_SearchOnNotifications.js",
+        "SCRIPT/Functions/RemoveTweet_RemoveByWords.js",
+        "SCRIPT/Functions/TweetAction_UpdateTweetMain.js",
+        "SCRIPT/Functions/TweetAction_CensurarTweet.js",
+        "SCRIPT/Functions/TweetAction_ImgPreview.js",
+        "SCRIPT/Functions/TweetMenu_AddOptions.js",
+        "SCRIPT/Functions/Tweet_CompareImagesByPixel.js",
+        "SCRIPT/Functions/RemoveFeed_RightContent.js",
+        "SCRIPT/Functions/RemoveTweet_SimilarByText.js",
+        "SCRIPT/Functions/video_autoPause.js",
+        "SCRIPT/Functions/RemoveTweet_NoPicProfile.js",
+        "SCRIPT/Functions/SmoothScroll.js",
+        "SCRIPT/Functions/Tweet.Spoiler_Tudo.js",
+        "SCRIPT/Functions/RemoveTweet_Enquetes.js",
+        "SCRIPT/Functions/RemoveTweet_OnlyLinks.js",
+        "SCRIPT/Functions/RemoveTweet_FakeVideos.js",
         "SCRIPT/TWITTER/TWITTER.js"
       ]
     }
